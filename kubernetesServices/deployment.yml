@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flasknginx
+spec:
+  selector:
+    matchLabels:
+      app: flasknginx
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flasknginx
+    spec:
+      containers:
+      - name: flasknginx
+        image: flasknginx:v1
+        ports:
+          - containerPort: 8085
+---
+
+
+

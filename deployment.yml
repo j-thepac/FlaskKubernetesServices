@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flasknginx
+spec:
+  selector:
+    matchLabels:
+      app: flasknginx
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flasknginx
+    spec:
+      containers:
+      - name: flasknginx
+        image: us.icr.io/cpanc-cr-dev/cpa-dev-repo/flasknginx:v1
+        ports:
+          - containerPort: 8085
+      imagePullSecrets:
+        - name: all-icr-io
+---
+
+
+

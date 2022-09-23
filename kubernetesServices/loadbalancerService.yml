@@ -9,3 +9,8 @@ spec:
   ports:
     - port: 8000
       targetPort: 8085
+
+# kubectl apply -f loadbalancerService.yml
+# kubectl get service
+# BROWSER: externalIP:port
+# kubectl delete service flasknginx-loadbalancer

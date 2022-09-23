@@ -10,3 +10,12 @@ spec:
   - port: 8085
     targetPort: 8085
     nodePort: 30036
+
+#kubectl apply -f nodePortService.yml 
+# kubectl cluster-info
+# kubectl get node -o wide
+
+# ----FOR IBM---
+# ibmcloud ks worker ls --cluster clustername If ur using IBM cloud
+# http://FirstPublicAddressAbove:30036/
+# kubectl delete service flasknginx-nodeportservice

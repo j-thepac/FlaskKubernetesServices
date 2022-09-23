@@ -10,6 +10,9 @@ spec:
   selector:
     app: flasknginx
 
-#kubectl apply -f kuber.yml 
+#-----TESTING ONLY-----
+#kubectl apply -f simpleService.yml
 #kubectl get services    
 #kubectl port-forward svc/flasknginx-service 8085:8085
+#Browser http://localhost:8085/
+#kubectl delete service flasknginx-service
